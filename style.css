@@ -1,0 +1,175 @@
+:root {
+  /* Colors */
+  --primary-color: #1b1b1b;
+  --secondary-color: grey;
+  --hover-color: rgba(0, 0, 0, 0.2);
+  --email-bg: #EFFDFD;
+  --sms-bg: #EFEEFC;
+  --webpush-bg: #FFF3F0;
+  --whatsapp-bg: #FAF9F4;
+
+  /* Font Sizes */
+  --font-size-base: 16px;
+  --font-size-small: 0.8rem;
+  --font-size-medium: 1.25rem;
+  --font-size-large: 1.5rem;
+
+  /* Spacing */
+  --small-gap: 0.625rem;
+  --medium-gap: 1.25rem;
+  --large-gap: 1.5rem;
+
+  /* Border Radius */
+  --border-radius: 5px;
+}
+
+/* Global Styles */
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: var(--font-size-base);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: clamp(1rem, 2.5vw, var(--font-size-medium));
+  font-weight: 400;
+  padding: var(--small-gap);
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 1.125rem;
+  color: rgb(185, 179, 179);
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: var(--primary-color);
+}
+
+/* Divider Styles */
+.divider {
+  border-bottom: 1px solid var(--primary-color);
+  margin: var(--small-gap) 0;
+}
+
+/* Campaign Section Styles */
+.campaign-standard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--small-gap);
+  padding-left: var(--small-gap);
+}
+
+.title {
+  font-size: var(--font-size-medium);
+  font-weight: 300;
+}
+
+.subtext {
+  font-size: var(--font-size-small);
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+/* Campaign Box Styles */
+.campaign-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--small-gap);
+  padding: var(--medium-gap);
+}
+
+.box-card {
+  border: 1px solid var(--secondary-color);
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  min-width: 12.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px var(--hover-color);
+}
+
+.icon-email, .icon-sms, .icon-webpush, .icon-whatsapp {
+  padding: var(--medium-gap) 0;
+}
+
+.icon-email {
+  background-color: var(--email-bg);
+}
+
+.icon-sms {
+  background-color: var(--sms-bg);
+}
+
+.icon-webpush {
+  background-color: var(--webpush-bg);
+}
+
+.icon-whatsapp {
+  background-color: var(--whatsapp-bg);
+}
+
+/* Campaign Template Styles */
+.campaign-template {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--medium-gap);
+}
+
+.custom {
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.custom:hover {
+  background-color: var(--primary-color);
+  cursor: pointer;
+  color: white;
+}
+
+.campaign-template-text {
+  font-size: var(--font-size-medium);
+  font-weight: 400;
+}
+
+.campaign-template-subtext {
+  font-size: var(--font-size-small);
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+/* Last Section Styles */
+.last {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--small-gap);
+  padding: var(--medium-gap);
+}
+
+.last-box {
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: var(--large-gap);
+  font-size: var(--font-size-small);
+  display: flex;
+  flex-direction: column;
+}
+
+.last-box-text {
+  padding: var(--small-gap) 0;
+  font-size: var(--font-size-small);
+}
